@@ -1,0 +1,31 @@
+/* miniprogram/pages/home/home.wxss */
+page {
+  height: 100%;
+  width: 750rpx;
+  display: flex;
+}
+
+.loginContainer {
+  height: 100%;
+  width: 750rpx;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.loginImg {
+  margin-top: 10px;
+  width: 750rpx;
+}
+
+.loginForm {
+  margin-top: 10px;
+  flex: auto;
+  height: 100%;
+}
+
+.loginButton {
+  margin-top: 35px;
+  flex: auto;
+}

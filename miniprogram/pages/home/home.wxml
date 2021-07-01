@@ -1,0 +1,50 @@
+<!--miniprogram/pages/home/home.wxml-->
+<!-- <text>miniprogram/pages/home/home.wxml</text> -->
+<view class="loginContainer">
+  <!-- 图片  -->
+  <view class="loginIcon">
+    <image class="loginImg" src="./img/login-img.jpeg"></image>
+  </view>
+  <!-- 表单 -->
+  <view class="loginForm">
+    <!-- 账号密码人员类别表单 -->
+    <view class="weui-cells weui-cells_form">
+      <!-- 账号 -->
+      <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <label class="weui-label">账号</label>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" type="text" placeholder="输入账号" bindinput="accountInput"/>
+        </view>
+      </view>
+      <!-- 密码 -->
+      <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <label class="weui-label">密码</label>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" type="text" placeholder="输入密码" bindinput="passwordInput"/>
+        </view>
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="page-section-title">用户身份</view>
+      <view class="weui-cells weui-cells_after-title">
+        <radio-group bindchange="identitySelection">
+          <label class="weui-cell weui-check__label" wx:for="{{identityItems}}" wx:key="value">
+            <view class="weui-cell__hd">
+              <radio value="{{identityItem.value}}" checked="true"/>
+            </view>
+            <view class="wedui-cell__bd">{{identityItem.name}}</view>
+          </label>
+        </radio-group>
+      </view>
+    </view>
+    <!-- 登陆按钮 -->
+    <view class="loginButton">
+      <button class="weui-btn weui-btn_primary" bindtap="loginFunction">登录</button>
+    </view>
+  </view>
+</view>
+

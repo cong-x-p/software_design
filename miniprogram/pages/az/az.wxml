@@ -1,0 +1,9 @@
+<!--miniprogram/pages/az/az.wxml-->
+<view class="container">
+<veiw>
+  <button class="weui-btn weui-btn_primary">click</button>
+</veiw>
+<view>
+  <button class="weui-btn weui-btn_primary">click</button>
+</view>
+</view>
