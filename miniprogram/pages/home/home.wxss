@@ -29,3 +29,18 @@ page {
   margin-top: 35px;
   flex: auto;
 }
+
+.registerButton {
+  margin-top: 10px;
+  flex: auto;
+}
+
+#ideneitySelection {
+  margin-top: 15px;
+  flex: auto;
+}
+
+#identitySelectionTitle {
+  font-size: 17px;
+  margin-left: 15px;
+}

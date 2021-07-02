@@ -5,7 +5,7 @@ Page({
     account: "",
     password: "",
     identity: "",
-    identityItems: [
+    items: [
       {value: "student", name: "学生"},
       {value: "teacher", name: "教师"},
       {value: "canteenManager", name: "食堂档口管理人员"}
@@ -27,7 +27,7 @@ Page({
   loginFunction: function() {
     if (this.data.account.length == 0 || this.data.password.length == 0) {
       wx.showToast({
-        title: 'Account and Password cannot be empty',
+        title: '账号密码不可为空',
         icon: 'none',
         duration: 1500
       });
@@ -37,18 +37,28 @@ Page({
         icon: 'success',
         duration: 1500
       });
+      console.log(this.data.account);
+      console.log(this.data.password);
+      console.log(this.data.identity);
     }
   },
 
+  registerSwitch: function(option) {
+    wx.navigateTo({
+      url: '../register/register',
+    });
+  },
+
   identitySelection: function(event) {
-    const identityItems = this.data.identityItems;
-    const len = identityItems.length;
+    const items = this.data.items;
+    const len = items.length;
     for (let i = 0; i < len; i++) {
-      identityItems[i].checked = identityItems[i].value === event.detail.value;
+      items[i].checked = items[i].value === event.detail.value;
     }
 
     this.setData({
-      identityItems
+      items,
+      identity: event.detail.value
     });
   }
 });

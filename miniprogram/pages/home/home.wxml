@@ -28,15 +28,15 @@
         </view>
       </view>
     </view>
-    <view class="page-section">
-      <view class="page-section-title">用户身份</view>
+    <view class="page-section" id="ideneitySelection">
+      <view class="page-section-title" id="identitySelectionTitle">用户身份</view>
       <view class="weui-cells weui-cells_after-title">
         <radio-group bindchange="identitySelection">
-          <label class="weui-cell weui-check__label" wx:for="{{identityItems}}" wx:key="value">
+          <label class="weui-cell weui-check__label" wx:for="{{items}}" wx:key="index">
             <view class="weui-cell__hd">
-              <radio value="{{identityItem.value}}" checked="true"/>
+              <radio value="{{item.value}}"/>
             </view>
-            <view class="wedui-cell__bd">{{identityItem.name}}</view>
+            <view class="wedui-cell__bd">{{item.name}}</view>
           </label>
         </radio-group>
       </view>
@@ -44,6 +44,10 @@
     <!-- 登陆按钮 -->
     <view class="loginButton">
       <button class="weui-btn weui-btn_primary" bindtap="loginFunction">登录</button>
+    </view>
+    <!-- 跳转至注册页面 -->
+    <view class="registerButton">
+      <button class="weui-btn weui-btn_primary" bindtap="registerSwitch">注册</button>
     </view>
   </view>
 </view>
