@@ -7,7 +7,7 @@
   </view>
   <!-- 表单 -->
   <view class="loginForm">
-    <!-- 账号密码人员类别表单 -->
+    <!-- 账号密码表单 -->
     <view class="weui-cells weui-cells_form">
       <!-- 账号 -->
       <view class="weui-cell">
@@ -15,7 +15,7 @@
           <label class="weui-label">账号</label>
         </view>
         <view class="weui-cell__bd">
-          <input class="weui-input" type="text" placeholder="输入账号" bindinput="accountInput"/>
+          <input class="weui-input" type="text" placeholder="输入账号" bindinput="accountInput" value="{{account}}"/>
         </view>
       </view>
       <!-- 密码 -->
@@ -24,11 +24,12 @@
           <label class="weui-label">密码</label>
         </view>
         <view class="weui-cell__bd">
-          <input class="weui-input" type="text" placeholder="输入密码" bindinput="passwordInput"/>
+          <input class="weui-input" password="true" type="text" placeholder="输入密码" bindinput="passwordInput" value="{{password}}"/>
         </view>
       </view>
     </view>
-    <view class="page-section" id="ideneitySelection">
+    <!-- 用户身份选择 -->
+    <view class="page-section" id="identitySelection">
       <view class="page-section-title" id="identitySelectionTitle">用户身份</view>
       <view class="weui-cells weui-cells_after-title">
         <radio-group bindchange="identitySelection">
@@ -47,7 +48,7 @@
     </view>
     <!-- 跳转至注册页面 -->
     <view class="registerButton">
-      <button class="weui-btn weui-btn_primary" bindtap="registerSwitch">注册</button>
+      <button class="weui-btn weui-btn_primary" bindtap="registerSwitch">还不是用户？</button>
     </view>
   </view>
 </view>

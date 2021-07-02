@@ -1,66 +1,102 @@
 // miniprogram/pages/register/register.js
 Page({
-
-    /**
-     * 页面的初始数据
-     */
     data: {
-
+        account: "",
+        password: "",
+        confirmPassword: "",
+        identity: "",
+        items: [
+            {value: "student", name: "学生"},
+            {value: "teacher", name: "教师"},
+            {value: "canteenManager", name: "食堂档口管理人员"}
+        ]
     },
 
-    /**
-     * 生命周期函数--监听页面加载
-     */
-    onLoad: function (options) {
-
+    accountInput: function(event) {
+        this.setData({
+            account: event.detail.value
+        });
     },
 
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady: function () {
-
+    passwordInput: function(event) {
+        this.setData({
+            password: event.detail.value
+        });
     },
 
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow: function () {
-
+    confirmPasswordInput: function(event) {
+        this.setData({
+            confirmPassword: event.detail.value
+        });
     },
 
-    /**
-     * 生命周期函数--监听页面隐藏
-     */
-    onHide: function () {
-
+    registerFucntion: function() {
+        if (this.data.account.length == 0) {
+            wx.showToast({
+              title: '账号不可为空',
+              icon: 'none',
+              duration: 1500
+            });
+        } else if (this.data.password.length == 0) {
+            wx.showToast({
+              title: '密码项不可为空',
+              icon: 'none',
+              duration: 1500
+            });
+        } else if (this.data.confirmPassword.length == 0) {
+            wx.showToast({
+              title: '确认密码项不可为空',
+              icon: 'none',
+              duration: 1500
+            });
+        } else if (this.data.password != this.data.confirmPassword) {
+            wx.showToast({
+              title: '密码与确认密码不一致，请重新输入',
+              icon: 'none',
+              duration: 1500
+            });
+            this.setData({
+                password: "",
+                confirmPassword: ""
+            });
+        } else if (this.data.identity.length == 0) {
+            wx.showToast({
+              title: '您还未选择身份',
+              icon: 'none',
+              duration: 1500
+            });
+        } else {
+            console.log(this.data.account);
+            console.log(this.data.password);
+            console.log(this.data.confirmPassword);
+            console.log(this.data.identity);
+            wx.showToast({
+              title: '注册成功',
+              icon: 'success',
+              duration: 1000
+            });
+            wx.navigateTo({
+              url: '../home/home'
+            });
+        }
     },
 
-    /**
-     * 生命周期函数--监听页面卸载
-     */
-    onUnload: function () {
-
+    identitySelection: function(event) {
+        const items = this.data.items;
+        const len = items.length;
+        for (let i = 0; i < len; i++) {
+          items[i].checked = items[i].value === event.detail.value;
+        }
+    
+        this.setData({
+          items,
+          identity: event.detail.value
+        });
     },
 
-    /**
-     * 页面相关事件处理函数--监听用户下拉动作
-     */
-    onPullDownRefresh: function () {
-
-    },
-
-    /**
-     * 页面上拉触底事件的处理函数
-     */
-    onReachBottom: function () {
-
-    },
-
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage: function () {
-
+    returnToLoginFunction: function() {
+        wx.navigateTo({
+          url: '../home/home'
+        })
     }
 })

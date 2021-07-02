@@ -45,7 +45,7 @@ Page({
 
   registerSwitch: function(option) {
     wx.navigateTo({
-      url: '../register/register',
+      url: '../register/register'
     });
   },
 

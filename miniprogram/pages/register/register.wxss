@@ -1,1 +1,40 @@
 /* miniprogram/pages/register/register.wxss */
+page {
+    height: 100%;
+    width: 750rpx;
+    display: flex;
+}
+
+.registerContainer {
+    height: 100%;
+    width: 750rpx;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.registerButton {
+    margin-top: 30px;
+    flex: auto;
+}
+
+.returnLoginButton {
+    margin-top: 10px;
+    flex: auto;
+}
+
+#identitySelection {
+    margin-top: 15px;
+    flex: auto;
+}
+
+#identitySelectionTitle {
+    font-size: 17px;
+    margin-left: 15px;
+}
+
+
+
+
+

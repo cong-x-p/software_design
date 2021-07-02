@@ -26,7 +26,7 @@ page {
 }
 
 .loginButton {
-  margin-top: 35px;
+  margin-top: 30px;
   flex: auto;
 }
 
@@ -35,7 +35,7 @@ page {
   flex: auto;
 }
 
-#ideneitySelection {
+#identitySelection {
   margin-top: 15px;
   flex: auto;
 }

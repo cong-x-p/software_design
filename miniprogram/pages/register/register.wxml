@@ -1,2 +1,56 @@
 <!--miniprogram/pages/register/register.wxml-->
-<text>miniprogram/pages/register/register.wxml</text>
+<view class="registerContainer">
+    <!-- 表单 -->
+    <view class="registerForm">
+        <!-- 账号密码表单 -->
+        <view class="weui-cells weui-cells_form">
+            <!-- 账号 -->
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <label class="weui-label">账号</label>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" type="text" placeholder="输入学号\工号\手机号码" bindinput="accountInput" value="{{account}}"/>
+                </view>
+            </view>
+            <!-- 密码 -->
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <label class="weui-label">密码</label>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" password="true" type="text" placeholder="输入密码" bindinput="passwordInput" value="{{password}}"/>
+                </view>
+            </view>
+            <!-- 确认密码 -->
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <label class="weui-label">确认密码</label>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" password="true" type="text" placeholder="输入确认密码" bindinput="confirmPasswordInput" value="{{confirmPassword}}"/>
+                </view>
+            </view>
+        </view>
+        <!-- 用户身份选择 -->
+        <view class="page-section" id="identitySelection">
+            <view class="page-section-title" id="identitySelectionTitle">用户身份</view>
+            <view class="weui-cells weui-cells_after-title">
+                <radio-group bindchange="identitySelection">
+                    <label class="weui-cell weui-check__label" wx:for="{{items}}" wx:key="index">
+                        <view class="weui-cell__hd">
+                            <radio value="{{item.value}}"/>
+                        </view>
+                        <view class="wedui-cell__bd">{{item.name}}</view>
+                    </label>
+                </radio-group>
+            </view>
+        </view>
+        <view class="registerButton">
+            <button class="weui-btn weui-btn_primary" bindtap="registerFucntion">注册</button>
+        </view>
+        <view class="returnLoginButton">
+            <button class="weui-btn weui-btn_primary" bindtap="returnToLoginFunction">返回登录界面</button>
+        </view>
+    </view>
+</view>
