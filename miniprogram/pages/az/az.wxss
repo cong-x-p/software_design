@@ -5,3 +5,7 @@
   display: flex;
   flex-direction: row;
 }
+
+.van-hairline--bottom.bar-index-hairline--bottom{
+  padding-top: 0px;
+}

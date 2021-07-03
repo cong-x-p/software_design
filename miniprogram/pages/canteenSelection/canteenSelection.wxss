@@ -1,0 +1,19 @@
+/* miniprogram/pages/canteenSelection/canteenSelection.wxss */
+.canteenSelectionContainer {
+    height: 100%;
+    width: 750rpx;
+    display: flex;
+    flex-direction: column;
+}
+
+.canteenSelectionNav {
+    padding-top: 1px;
+}
+
+.van-card__title {
+    font-size: 15px;
+}
+
+.van-card__desc {
+    font-size: 13px;
+}

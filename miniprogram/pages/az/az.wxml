@@ -1,9 +1,7 @@
 <!--miniprogram/pages/az/az.wxml-->
-<view class="container">
-<veiw>
-  <button class="weui-btn weui-btn_primary">click</button>
-</veiw>
-<view>
-  <button class="weui-btn weui-btn_primary">click</button>
-</view>
-</view>
+<van-nav-bar
+  title="标题"
+  left-text="返回"
+  right-text="按钮"
+  left-arrow
+/>

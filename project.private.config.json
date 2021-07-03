@@ -1,4 +1,5 @@
 {
+    "setting": {},
     "condition": {
         "plugin": {
             "list": []
@@ -20,6 +21,18 @@
                 {
                     "name": "pages/register/register",
                     "pathName": "pages/register/register",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/canteenSelection/canteenSelection",
+                    "pathName": "pages/canteenSelection/canteenSelection",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/az/az",
+                    "pathName": "pages/az/az",
                     "query": "",
                     "scene": null
                 }

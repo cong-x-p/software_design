@@ -37,6 +37,9 @@ Page({
         icon: 'success',
         duration: 1500
       });
+      wx.navigateTo({
+        url: '../canteenSelection/canteenSelection',
+      });
       console.log(this.data.account);
       console.log(this.data.password);
       console.log(this.data.identity);
