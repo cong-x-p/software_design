@@ -35,6 +35,12 @@
                     "pathName": "pages/az/az",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "pages/foodSelection/foodSelection",
+                    "pathName": "pages/foodSelection/foodSelection",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }

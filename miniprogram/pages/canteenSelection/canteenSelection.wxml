@@ -1,39 +1,39 @@
 <!--miniprogram/pages/canteenSelection/canteenSelection.wxml-->
 <view class="canteenSelectionContainer">
     <view class="canteenSelectionNav">
-        <van-nav-bar title="食堂档口选择" left-text="返回" right-text="我的" left-arrow/>
+        <van-nav-bar title="食堂档口选择" left-text="返回" right-text="控制台" left-arrow/>
     </view>
-    <van-card title="美食园-煎饼档口" desc="煎饼" thumb="./image/ipad.jpeg" id="msy-jianbing">
+    <van-card title="美食园-煎饼档口" desc="煎饼" thumb="./image/canteen.png" id="msy-jianbing">
         <view slot="footer">
             <van-button type="info" size="mini">进入</van-button>
         </view>
     </van-card>
-    <van-card title="美食园-煎饼档口" desc="煎饼" thumb="./image/ipad.jpeg" id="msy-jianbing">
+    <van-card title="美食园-煎饼档口" desc="煎饼" thumb="./image/canteen.png" id="msy-jianbing">
         <view slot="footer">
             <van-button type="info" size="mini">进入</van-button>
         </view>
     </van-card>
-    <van-card title="美食园-煎饼档口" desc="煎饼" thumb="./image/ipad.jpeg" id="msy-jianbing">
+    <van-card title="美食园-煎饼档口" desc="煎饼" thumb="./image/canteen.png" id="msy-jianbing">
         <view slot="footer">
             <van-button type="info" size="mini">进入</van-button>
         </view>
     </van-card>
-    <van-card title="美食园-煎饼档口" desc="煎饼" thumb="./image/ipad.jpeg" id="msy-jianbing">
+    <van-card title="美食园-煎饼档口" desc="煎饼" thumb="./image/canteen.png" id="msy-jianbing">
         <view slot="footer">
             <van-button type="info" size="mini">进入</van-button>
         </view>
     </van-card>
-    <van-card title="美食园-煎饼档口" desc="煎饼" thumb="./image/ipad.jpeg" id="msy-jianbing">
+    <van-card title="美食园-煎饼档口" desc="煎饼" thumb="./image/canteen.png" id="msy-jianbing">
         <view slot="footer">
             <van-button type="info" size="mini">进入</van-button>
         </view>
     </van-card>
-    <van-card title="美食园-煎饼档口" desc="煎饼" thumb="./image/ipad.jpeg" id="msy-jianbing">
+    <van-card title="美食园-煎饼档口" desc="煎饼" thumb="./image/canteen.png" id="msy-jianbing">
         <view slot="footer">
             <van-button type="info" size="mini">进入</van-button>
         </view>
     </van-card>
-    <van-card title="美食园-煎饼档口" desc="煎饼" thumb="./image/ipad.jpeg" id="msy-jianbing">
+    <van-card title="美食园-煎饼档口" desc="煎饼" thumb="./image/canteen.png" id="msy-jianbing">
         <view slot="footer">
             <van-button type="info" size="mini">进入</van-button>
         </view>

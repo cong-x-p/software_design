@@ -3,7 +3,8 @@
         "pages/home/home",
         "pages/register/register",
         "pages/canteenSelection/canteenSelection",
-        "pages/az/az"
+        "pages/az/az",
+        "pages/foodSelection/foodSelection"
     ],
     "window": {
         "backgroundColor": "#F6F6F6",

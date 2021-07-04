@@ -6,10 +6,6 @@
     flex-direction: column;
 }
 
-.canteenSelectionNav {
-    padding-top: 1px;
-}
-
 .van-card__title {
     font-size: 15px;
 }
@@ -17,3 +13,8 @@
 .van-card__desc {
     font-size: 13px;
 }
+
+.van-card {
+    margin-top: 15px;
+}
+
