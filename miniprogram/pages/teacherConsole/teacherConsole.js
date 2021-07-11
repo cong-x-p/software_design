@@ -1,4 +1,4 @@
-// miniprogram/pages/canteenSelection/canteenSelection.js
+// miniprogram/pages/teacherConsole/teacherConsole.js
 Page({
 
     /**
@@ -62,17 +62,5 @@ Page({
      */
     onShareAppMessage: function () {
 
-    },
-
-    clickToFoodSelection: function(option) {
-        wx.navigateTo({
-          url: '../foodSelection/foodSelection'
-        });
-    },
-
-    onClickLeft: function(option) {
-      wx.navigateTo({
-        url: '../studentConsole/studentConsole'
-      })
     }
 })

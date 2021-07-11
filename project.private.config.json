@@ -41,6 +41,18 @@
                     "pathName": "pages/foodSelection/foodSelection",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "pages/studentConsole/studentConsole",
+                    "pathName": "pages/studentConsole/studentConsole",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/teacherConsole/teacherConsole",
+                    "pathName": "pages/teacherConsole/teacherConsole",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }

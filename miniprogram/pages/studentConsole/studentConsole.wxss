@@ -1,0 +1,19 @@
+/* miniprogram/pages/studentConsole/studentConsole.wxss */
+.studentConsoleContainer {
+    height: 100%;
+    width: 750rpx;
+    display: flex;
+    flex-direction: column;
+}
+
+.van-card__title {
+    font-size: 15px;
+}
+
+.van-card__desc {
+    font-size: 13px;
+}
+
+.van-card {
+    margin-top: 15px;
+}

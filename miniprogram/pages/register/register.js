@@ -66,10 +66,18 @@ Page({
               duration: 1500
             });
         } else {
-            console.log(this.data.account);
-            console.log(this.data.password);
-            console.log(this.data.confirmPassword);
-            console.log(this.data.identity);
+            wx.request({
+              url: 'http://82.156.219.94:8000/enroll/',
+              data: {
+                username: this.data.account,
+                password: this.data.password,
+                identity: this.data.identity
+              },
+              method: 'POST',
+              header: {
+                'Content-type': 'json'
+              }
+            });
             wx.showToast({
               title: '注册成功',
               icon: 'success',
