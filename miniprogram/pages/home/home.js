@@ -64,15 +64,15 @@ Page({
             userObj = JSON.stringify(userObj);
             if (temp.data.identity === "student") {
               wx.navigateTo({
-                url: '../studentConsole/studentConsole?user=' + encodeURIComponent(userObj)
+                url: '../studentConsole/studentConsole?userObj=' + encodeURIComponent(userObj)
               });
             } else if (temp.data.identity === "teacher") {
               wx.navigateTo({
-                url: '../teacherConsole/teacherConsole?user=' + encodeURIComponent(userObj)
+                url: '../teacherConsole/teacherConsole?userObj=' + encodeURIComponent(userObj)
               });
             } else if (temp.data.identity == "canteenManager") {
               wx.navigateTo({
-                url: '../canteenManagerConsole/canteenManagerConsole?user=' + encodeURIComponent(userObj)
+                url: '../canteenManagerConsole/canteenManagerConsole?userObj=' + encodeURIComponent(userObj)
               });
             }
           } else {

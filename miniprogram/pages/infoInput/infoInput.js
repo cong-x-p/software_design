@@ -1,9 +1,5 @@
 // miniprogram/pages/infoInput/infoInput.js
 Page({
-
-    /**
-     * 页面的初始数据
-     */
     data: {
         account: '',
         name: '',
@@ -26,7 +22,6 @@ Page({
                 price: userObj.price,
                 content: userObj.content
             });
-            console.log(that.data);
           }
     },
 
