@@ -12,7 +12,7 @@
         </van-cell-group>
     </view>
     <view class="inputInfoButton">
-        <button class="weui-btn weui-btn_primary" bindtap="clickToInputInfo">开始点餐</button>
+        <button class="weui-btn weui-btn_primary" bindtap="clickToInputInfo">提交订单</button>
     </view>
 </view>
 

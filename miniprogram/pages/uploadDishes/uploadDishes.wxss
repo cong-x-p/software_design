@@ -12,3 +12,9 @@
     align-items: center;
     justify-content: center;
 }
+
+.uploadDishesJudge {
+    display: flex;
+    margin-top: 15px;
+    margin-left: 17px;
+}

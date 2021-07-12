@@ -26,9 +26,13 @@ Page({
     },
 
     clickToCanteenSelection: function(option) {
+        let userObj = {
+            account: this.data.account
+        };
+        userObj = JSON.stringify(userObj);
         wx.navigateTo({
-          url: '../canteenSelection/canteenSelection'
-        })
+          url: '../canteenSelection/canteenSelection?userObj=' + encodeURIComponent(userObj)
+        });
     },
 
     onClickLeft: function(option) {

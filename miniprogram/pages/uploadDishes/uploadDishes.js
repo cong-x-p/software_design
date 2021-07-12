@@ -8,21 +8,26 @@ Page({
         canteenNum: '',
         title: '',
         description: '',
-        price: ''
+        price: '',
+        check: false
+    },
+
+    judgeOnChange(event) {
+        this.setData({
+            check: event.detail
+        });
     },
 
     clickToUploadDish() {
         const that = this;
-        console.log(this.data.title);
-        console.log(this.data.description);
-        console.log(this.data.price);
         wx.request({
           url: 'http://82.156.219.94:8000/Add_Menu/',
           data: {
-              Shop_id: this.data.canteenNum,
-              Menu_name: this.data.title,
-              Menu_des: this.data.description,
-              price: this.data.price
+              Shop_id: that.data.canteenNum,
+              Menu_name: that.data.title,
+              Menu_des: that.data.description,
+              price: that.data.price,
+              Package: that.data.check
           },
           method: 'POST',
           header: {

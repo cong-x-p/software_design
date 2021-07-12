@@ -71,6 +71,12 @@
                     "pathName": "pages/infoInput/infoInput",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "pages/studentHistoryOrder/studentHistoryOrder",
+                    "pathName": "pages/studentHistoryOrder/studentHistoryOrder",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }

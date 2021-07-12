@@ -9,6 +9,11 @@
             <van-field model:value="{{title}}" placeholder="输入菜品名称" label="菜品名称" size="large"/>
             <van-field model:value="{{description}}" placeholder="输入菜品描述" label="菜品描述" size="large"/>
             <van-field model:value="{{price}}" placeholder="输入菜品单价" label="菜品单价" size="large"/>
+            <view class="uploadDishesJudge">
+                <van-checkbox value="{{check}}" bind:change="judgeOnChange">
+                    是否为套餐
+                </van-checkbox>
+            </view>
         </van-cell-group>
     </view>
     <view class="uploadDishesButton">

@@ -14,5 +14,5 @@
             </van-cell>
         </van-cell-group>
     </view>
-    <van-submit-bar price="{{orderPrice}}" button-text="提交订单"/>
+    <van-submit-bar price="{{orderPrice}}" button-text="填写地址" bind:submit="onSubmit"/>
 </view>
