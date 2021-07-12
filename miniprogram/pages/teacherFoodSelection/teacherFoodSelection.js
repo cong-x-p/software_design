@@ -1,4 +1,4 @@
-// miniprogram/pages/foodSelection/foodSelection.js
+// miniprogram/pages/teacherFoodSelection/teacherFoodSelection.js
 Page({
     data: {
       account: '',

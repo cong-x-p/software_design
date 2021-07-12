@@ -77,6 +77,18 @@
                     "pathName": "pages/studentHistoryOrder/studentHistoryOrder",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "pages/teacherFoodSelection/teacherFoodSelection",
+                    "pathName": "pages/teacherFoodSelection/teacherFoodSelection",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/teacherCanteenSelection/teacherCanteenSelection",
+                    "pathName": "pages/teacherCanteenSelection/teacherCanteenSelection",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }

@@ -1,0 +1,12 @@
+/* miniprogram/pages/teacherFoodSelection/teacherFoodSelection.wxss */
+.van-card {
+    margin-top: 15px;
+}
+
+.van-card__title {
+    font-size: 15px;
+}
+
+.van-card__desc {
+    font-size: 13px;
+}

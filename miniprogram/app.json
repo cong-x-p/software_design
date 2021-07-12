@@ -10,7 +10,9 @@
         "pages/canteenManagerConsole/canteenManagerConsole",
         "pages/uploadDishes/uploadDishes",
         "pages/infoInput/infoInput",
-        "pages/studentHistoryOrder/studentHistoryOrder"
+        "pages/studentHistoryOrder/studentHistoryOrder",
+        "pages/teacherFoodSelection/teacherFoodSelection",
+        "pages/teacherCanteenSelection/teacherCanteenSelection"
     ],
     "window": {
         "backgroundColor": "#F6F6F6",
