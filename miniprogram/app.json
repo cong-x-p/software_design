@@ -6,7 +6,10 @@
         "pages/az/az",
         "pages/foodSelection/foodSelection",
         "pages/studentConsole/studentConsole",
-        "pages/teacherConsole/teacherConsole"
+        "pages/teacherConsole/teacherConsole",
+        "pages/canteenManagerConsole/canteenManagerConsole",
+        "pages/uploadDishes/uploadDishes",
+        "pages/infoInput/infoInput"
     ],
     "window": {
         "backgroundColor": "#F6F6F6",

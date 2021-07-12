@@ -76,15 +76,17 @@ Page({
               method: 'POST',
               header: {
                 'Content-type': 'json'
+              },
+              success(res) {
+                wx.showToast({
+                  title: '注册成功',
+                  icon: 'success',
+                  duration: 1000
+                });
+                wx.navigateTo({
+                  url: '../home/home'
+                });
               }
-            });
-            wx.showToast({
-              title: '注册成功',
-              icon: 'success',
-              duration: 1000
-            });
-            wx.navigateTo({
-              url: '../home/home'
             });
         }
     },

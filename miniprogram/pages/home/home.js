@@ -62,9 +62,19 @@ Page({
               identity: temp.data.identity
             };
             userObj = JSON.stringify(userObj);
-            wx.navigateTo({
-              url: '../studentConsole/studentConsole?user=' + encodeURIComponent(userObj)
-            });
+            if (temp.data.identity === "student") {
+              wx.navigateTo({
+                url: '../studentConsole/studentConsole?user=' + encodeURIComponent(userObj)
+              });
+            } else if (temp.data.identity === "teacher") {
+              wx.navigateTo({
+                url: '../teacherConsole/teacherConsole?user=' + encodeURIComponent(userObj)
+              });
+            } else if (temp.data.identity == "canteenManager") {
+              wx.navigateTo({
+                url: '../canteenManagerConsole/canteenManagerConsole?user=' + encodeURIComponent(userObj)
+              });
+            }
           } else {
             wx.showToast({
               title: '登录失败',

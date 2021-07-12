@@ -1,0 +1,14 @@
+/* miniprogram/pages/uploadDishes/uploadDishes.wxss */
+.uploadDishesContainer {
+    height: 100%;
+    width: 750rpx;
+    display: flex;
+    flex-direction: column;
+}
+
+.uploadDishesButton {
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: center;
+}

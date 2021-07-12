@@ -1,0 +1,18 @@
+<!--miniprogram/pages/infoInput/infoInput.wxml-->
+<view class="infoInputContainer">
+    <view class="functionSelectionNav">
+        <van-nav-bar title="上传配送所需信息" left-text="返回" right-text="控制台" left-arrow bind:click-left="onClickLeft"/>
+    </view>
+    <view class="inputDishesInfo">
+        <van-cell-group>
+            <van-field model:value="{{name}}" placeholder="请输入本人姓名" label="姓名" size="large"/>
+            <van-field model:value="{{studentNum}}" placeholder="请输入本人学号" label="学号" size="large"/>
+            <van-field model:value="{{phoneNum}}" placeholder="请输入本人电话号码" label="电话号码" size="large"/>
+            <van-field model:value="{{address}}" placeholder="请输入配送地址" label="配送地址" size="large"/>
+        </van-cell-group>
+    </view>
+    <view class="inputInfoButton">
+        <button class="weui-btn weui-btn_primary" bindtap="clickToInputInfo">开始点餐</button>
+    </view>
+</view>
+

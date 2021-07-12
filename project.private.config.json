@@ -53,6 +53,24 @@
                     "pathName": "pages/teacherConsole/teacherConsole",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "pages/canteenManagerConsole/canteenManagerConsole",
+                    "pathName": "pages/canteenManagerConsole/canteenManagerConsole",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/uploadDishes/uploadDishes",
+                    "pathName": "pages/uploadDishes/uploadDishes",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/infoInput/infoInput",
+                    "pathName": "pages/infoInput/infoInput",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }

@@ -5,11 +5,38 @@ Page({
      * 页面的初始数据
      */
     data: {
-      items: [
-        {quantity: 0, price: 3, title: "馒头"},
-        {quantity: 0, price: 5, title: "米饭"}
-      ],
+      canteenNum: '',
+      items: [],
       orderPrice: 0
+    },
+
+    onLoad: function(option) {
+      var that = this;
+      if (option && option.canteenNum) {
+        let userObj = decodeURIComponent(option.canteenNum);
+        userObj = JSON.parse(userObj);
+        that.setData({
+            canteenNum: userObj.canteenNum
+        });
+        console.log(that.data.canteenNum);
+        // console.log(this.data.account);
+        // console.log(this.data.password);
+        // console.log(this.data.identity);
+      }
+      let temp = "http://82.156.219.94:8000/Shop_id/" + that.data.canteenNum.toString();
+      wx.request({
+        url: temp,
+        method: 'GET',
+        header: {
+          'Content-type': 'json'
+        },
+        success: function(res) {
+          that.setData({
+            items: res.data.data
+          });
+          // console.log(res.data.data);
+        }
+      });
     },
 
     onClickLeft: function() {

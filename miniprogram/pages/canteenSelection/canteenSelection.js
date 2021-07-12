@@ -65,8 +65,12 @@ Page({
     },
 
     clickToFoodSelection: function(option) {
+        let userObj = {
+          canteenNum: 1
+        };
+        userObj = JSON.stringify(userObj);
         wx.navigateTo({
-          url: '../foodSelection/foodSelection'
+          url: '../foodSelection/foodSelection?canteenNum=' + encodeURIComponent(userObj)
         });
     },
 
