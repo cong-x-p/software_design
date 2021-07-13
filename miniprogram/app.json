@@ -13,7 +13,9 @@
         "pages/studentHistoryOrder/studentHistoryOrder",
         "pages/teacherGatherCanteenSelection/teacherGatherCanteenSelection",
         "pages/teacherGatherFoodSelection/teacherGatherFoodSelection",
-        "pages/teacherGatherOrderInfoInput/teacherGatherOrderInfoInput"
+        "pages/teacherGatherOrderInfoInput/teacherGatherOrderInfoInput",
+        "pages/deleteDishes/deleteDishes",
+        "pages/canteenOrder/canteenOrder"
     ],
     "window": {
         "backgroundColor": "#F6F6F6",

@@ -107,6 +107,18 @@
                     "pathName": "pages/teacherGatherOrderInfoInput/teacherGatherOrderInfoInput",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "pages/deleteDishes/deleteDishes",
+                    "pathName": "pages/deleteDishes/deleteDishes",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/canteenOrder/canteenOrder",
+                    "pathName": "pages/canteenOrder/canteenOrder",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }

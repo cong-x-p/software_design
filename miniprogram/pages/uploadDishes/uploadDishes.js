@@ -56,6 +56,7 @@ Page({
     },
 
     onClickLeft: function(option) {
+        var temp = this;
         let userObj = {
             account: temp.data.account,
             password: temp.data.password,
