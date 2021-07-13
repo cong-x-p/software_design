@@ -11,8 +11,9 @@
         "pages/uploadDishes/uploadDishes",
         "pages/infoInput/infoInput",
         "pages/studentHistoryOrder/studentHistoryOrder",
-        "pages/teacherFoodSelection/teacherFoodSelection",
-        "pages/teacherCanteenSelection/teacherCanteenSelection"
+        "pages/teacherGatherCanteenSelection/teacherGatherCanteenSelection",
+        "pages/teacherGatherFoodSelection/teacherGatherFoodSelection",
+        "pages/teacherGatherOrderInfoInput/teacherGatherOrderInfoInput"
     ],
     "window": {
         "backgroundColor": "#F6F6F6",

@@ -1,7 +1,7 @@
 <!--miniprogram/pages/studentConsole/studentConsole.wxml-->
 <view class="studentConsoleContainer">
     <view class="canteenSelectionNav">
-        <van-nav-bar title="学生控制台" left-text="返回" right-text="控制台" left-arrow bind:click-left="onClickLeft"/>
+        <van-nav-bar title="学生控制台" left-text="退出" right-text="控制台" left-arrow bind:click-left="onClickLeft"/>
     </view>
     <van-card title="点餐" desc="点击进入选择不同食堂档口" thumb="./image/order.png" id="msy-jianbing">
         <view slot="footer">

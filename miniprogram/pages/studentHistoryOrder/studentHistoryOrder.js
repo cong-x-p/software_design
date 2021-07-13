@@ -47,8 +47,14 @@ Page({
             identity: this.data.identity
         };
         userObj = JSON.stringify(userObj);
-        wx.navigateTo({
-            url: '../studentConsole/studentConsole?userObj=' + encodeURIComponent(userObj)
-        });
+        if (this.data.identity === 'student') {
+            wx.navigateTo({
+                url: '../studentConsole/studentConsole?userObj=' + encodeURIComponent(userObj)
+            });
+        } else if (this.data.identity === 'teacher') {
+            wx.navigateTo({
+                url: '../teacherConsole/teacherConsole?userObj=' + encodeURIComponent(userObj)
+            });
+        }
     }
 })

@@ -1,15 +1,26 @@
 // miniprogram/pages/uploadDishes/uploadDishes.js
 Page({
-
-    /**
-     * 页面的初始数据
-     */
     data: {
+        account: '',
+        password: '',
+        identity: '',
         canteenNum: '',
         title: '',
         description: '',
         price: '',
         check: false
+    },
+
+    onLoad: function (options) {
+        if (options && options.userObj) {
+            let userObj = decodeURIComponent(options.userObj);
+            userObj = JSON.parse(userObj);
+            this.setData({
+                account: userObj.account,
+                password: userObj.password,
+                identity: userObj.identity
+            });
+        }
     },
 
     judgeOnChange(event) {
@@ -23,7 +34,7 @@ Page({
         wx.request({
           url: 'http://82.156.219.94:8000/Add_Menu/',
           data: {
-              Shop_id: that.data.canteenNum,
+              Username: that.data.account,
               Menu_name: that.data.title,
               Menu_des: that.data.description,
               price: that.data.price,
@@ -44,9 +55,15 @@ Page({
         });
     },
 
-    onClickLeft: () => {
+    onClickLeft: function(option) {
+        let userObj = {
+            account: temp.data.account,
+            password: temp.data.password,
+            identity: temp.data.identity
+          };
+        userObj = JSON.stringify(userObj);
         wx.navigateTo({
-          url: '../canteenManagerConsole/canteenManagerConsole'
+          url: '../canteenManagerConsole/canteenManagerConsole?userObj=' + encodeURIComponent(userObj)
         });
     }
 })

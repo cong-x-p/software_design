@@ -2,6 +2,8 @@
 Page({
     data: {
       account: '',
+      password: '',
+      identity: '',
       canteenNum: '',
       items: [],
       orderPrice: 0
@@ -15,7 +17,9 @@ Page({
         // console.log(userObj);
         that.setData({
             canteenNum: userObj.canteenNum,
-            account: userObj.account
+            account: userObj.account,
+            password: userObj.password,
+            identity: userObj.identity
         });
         // console.log(that.data.canteenNum);
         // console.log(this.data.account);
@@ -41,8 +45,14 @@ Page({
     },
 
     onClickLeft: function() {
+      let userObj = {
+        account: this.data.account,
+        password: this.data.password,
+        identity: this.data.identity
+      };
+      userObj = JSON.stringify(userObj);
       wx.navigateTo({
-        url: '../canteenSelection/canteenSelection'
+        url: '../canteenSelection/canteenSelection?userObj=' + encodeURIComponent(userObj)
       });
     },
 
@@ -89,7 +99,9 @@ Page({
         account: this.data.account,
         canteenNum: this.data.canteenNum,
         content: content,
-        price: this.data.orderPrice
+        price: this.data.orderPrice,
+        password: this.data.password,
+        identity: this.data.identity
       }
       userObj = JSON.stringify(userObj);
       wx.navigateTo({

@@ -2,6 +2,8 @@
 Page({
     data: {
         account: '',
+        password: '',
+        identity: '',
         name: '',
         studentNum: '',
         phoneNum: '',
@@ -20,12 +22,15 @@ Page({
                 account: userObj.account,
                 canteenNum: userObj.canteenNum,
                 price: userObj.price,
-                content: userObj.content
+                content: userObj.content,
+                password: userObj.password,
+                identity: userObj.identity
             });
           }
     },
 
     clickToInputInfo() {
+        var that = this;
         wx.request({
           url: 'http://82.156.219.94:8000/Add_Order',
           method: 'POST',
@@ -45,9 +50,27 @@ Page({
                 icon: 'success',
                 duration: 1500
               });
-              wx.navigateTo({
-                url: '../studentConsole/studentConsole'
-              });
+              if (that.data.identity === 'student') {
+                let userObj = {
+                  account: that.data.account,
+                  password: that.data.password,
+                  identity: that.data.identity
+                };
+                userObj = JSON.stringify(userObj);
+                wx.navigateTo({
+                  url: '../studentConsole/studentConsole?userObj=' + encodeURIComponent(userObj)
+                });
+              } else if (that.data.identity === 'teacher') {
+                let userObj = {
+                  account: that.data.account,
+                  password: that.data.password,
+                  identity: that.data.identity
+                };
+                userObj = JSON.stringify(userObj);
+                wx.navigateTo({
+                  url: '../teacherConsole/teacherConsole?userObj=' + encodeURIComponent(userObj)
+                });
+              }
           }
         });
     }

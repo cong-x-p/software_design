@@ -89,6 +89,24 @@
                     "pathName": "pages/teacherCanteenSelection/teacherCanteenSelection",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "pages/teacherGatherCanteenSelection/teacherGatherCanteenSelection",
+                    "pathName": "pages/teacherGatherCanteenSelection/teacherGatherCanteenSelection",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/teacherGatherFoodSelection/teacherGatherFoodSelection",
+                    "pathName": "pages/teacherGatherFoodSelection/teacherGatherFoodSelection",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/teacherGatherOrderInfoInput/teacherGatherOrderInfoInput",
+                    "pathName": "pages/teacherGatherOrderInfoInput/teacherGatherOrderInfoInput",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }

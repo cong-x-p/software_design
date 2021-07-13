@@ -1,0 +1,14 @@
+/* miniprogram/pages/teacherGatherOrderInfoInput/teacherGatherOrderInfoInput.wxss */
+.teacherGatherOrderInfoInputContainer {
+    height: 100%;
+    width: 750rpx;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputInfoButton {
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: center;
+}

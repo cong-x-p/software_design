@@ -1,66 +1,65 @@
 // miniprogram/pages/teacherConsole/teacherConsole.js
 Page({
-
-    /**
-     * 页面的初始数据
-     */
     data: {
-
+        account: '',
+        password: '',
+        identity: ''
     },
 
-    /**
-     * 生命周期函数--监听页面加载
-     */
-    onLoad: function (options) {
-
+    onLoad: function(option) {
+        if (option && option.userObj) {
+            let userObj = decodeURIComponent(option.userObj);
+            userObj = JSON.parse(userObj);
+            this.setData({
+                account: userObj.account,
+                password: userObj.password,
+                identity: userObj.identity
+            });
+        }
     },
 
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady: function () {
-
+    clickToCanteenSelection: function(option) {
+        let userObj = {
+            account: this.data.account,
+            password: this.data.password,
+            identity: this.data.identity
+        };
+        userObj = JSON.stringify(userObj);
+        wx.navigateTo({
+          url: '../canteenSelection/canteenSelection?userObj=' + encodeURIComponent(userObj)
+        });
+        // console.log(this.data.account);
+        // console.log(this.data.password);
+        // console.log(this.data.identity);
     },
 
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow: function () {
-
+    clickToViewHistoryOrder: function(option) {
+        let userObj = {
+            account: this.data.account,
+            password: this.data.password,
+            identity: this.data.identity
+        };
+        userObj = JSON.stringify(userObj);
+        wx.navigateTo({
+          url: '../studentHistoryOrder/studentHistoryOrder?userObj=' + encodeURIComponent(userObj)
+        });
     },
 
-    /**
-     * 生命周期函数--监听页面隐藏
-     */
-    onHide: function () {
-
+    clickToGatherCanteenSelection: function(option) {
+        let userObj = {
+            account: this.data.account,
+            password: this.data.password,
+            identity: this.data.identity
+        };
+        userObj = JSON.stringify(userObj);
+        wx.navigateTo({
+          url: '../teacherGatherCanteenSelection/teacherGatherCanteenSelection?userObj=' + encodeURIComponent(userObj)
+        });
     },
 
-    /**
-     * 生命周期函数--监听页面卸载
-     */
-    onUnload: function () {
-
-    },
-
-    /**
-     * 页面相关事件处理函数--监听用户下拉动作
-     */
-    onPullDownRefresh: function () {
-
-    },
-
-    /**
-     * 页面上拉触底事件的处理函数
-     */
-    onReachBottom: function () {
-
-    },
-
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage: function () {
-
+    onClickLeft: function(option) {
+        wx.navigateTo({
+          url: '../home/home'
+        });
     }
 })

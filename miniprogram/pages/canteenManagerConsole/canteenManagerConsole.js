@@ -1,16 +1,39 @@
 // miniprogram/pages/canteenManagerConsole/canteenManagerConsole.js
 Page({
-
-    /**
-     * 页面的初始数据
-     */
     data: {
-
+      account: '',
+      password: '',
+      identity: ''
     },
 
-    clickToUploadDishes: () => {
-        wx.navigateTo({
-          url: '../uploadDishes/uploadDishes',
+    onLoad: function (options) {
+      if (options && options.userObj) {
+        let userObj = decodeURIComponent(options.userObj);
+        userObj = JSON.parse(userObj);
+        this.setData({
+          account: userObj.account,
+          password: userObj.password,
+          identity: userObj.identity
         });
+      }
+    },
+
+    clickToUploadDishes: function(option) {
+      var temp = this;
+      let userObj = {
+        account: temp.data.account,
+        password: temp.data.password,
+        identity: temp.data.identity
+      };
+      userObj = JSON.stringify(userObj);
+      wx.navigateTo({
+        url: '../uploadDishes/uploadDishes?userObj=' + encodeURIComponent(userObj)
+      });
+    },
+
+    onClickLeft: function(option) {
+      wx.navigateTo({
+        url: '../home/home'
+      })
     }
 })
