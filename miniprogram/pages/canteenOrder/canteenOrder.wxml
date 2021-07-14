@@ -6,7 +6,7 @@
     <view class="canteenOrder">
         <van-cell-group>
             <van-cell wx:for="{{items}}" wx:key="index">
-                <van-card desc="{{item.detail}}" price="{{item.price / 100}}" title="{{item.phonenum + ' ' + item.name}}" thumb="./image/food.png" />
+                <van-card desc="{{item.detail}}" price="{{item.price / 100}}" title="{{item.phonenum + ' ' + item.name}}" thumb="./image/studentHistoryOrder.png" />
             </van-cell>
         </van-cell-group>
     </view>

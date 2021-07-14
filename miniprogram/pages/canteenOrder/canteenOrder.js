@@ -43,7 +43,7 @@ Page({
         };
         userObj = JSON.stringify(userObj);
         wx.navigateTo({
-          url: '../canteenManagerConsole/canteenManagerConsole.js' + encodeURIComponent(userObj)
+          url: '../canteenManagerConsole/canteenManagerConsole?userObj=' + encodeURIComponent(userObj)
         });
     }
 })
