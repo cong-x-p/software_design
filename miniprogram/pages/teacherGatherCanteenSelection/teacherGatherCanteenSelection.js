@@ -22,7 +22,7 @@ Page({
         }
     },
 
-    clickToFoodSelection: function(option) {
+    clickToFoodSelection_1: function(option) {
         let userObj = {
           canteenNum: 1,
           account: this.data.account,
@@ -33,6 +33,58 @@ Page({
         wx.navigateTo({
           url: '../teacherGatherFoodSelection/teacherGatherFoodSelection?userObj=' + encodeURIComponent(userObj)
         });
+    },
+
+    clickToFoodSelection_2: function(option) {
+      let userObj = {
+        canteenNum: 2,
+        account: this.data.account,
+        password: this.data.password,
+        identity: this.data.identity,
+      };
+      userObj = JSON.stringify(userObj);
+      wx.navigateTo({
+        url: '../teacherGatherFoodSelection/teacherGatherFoodSelection?userObj=' + encodeURIComponent(userObj)
+      });
+    },
+
+    clickToFoodSelection_3: function(option) {
+      let userObj = {
+        canteenNum: 3,
+        account: this.data.account,
+        password: this.data.password,
+        identity: this.data.identity,
+      };
+      userObj = JSON.stringify(userObj);
+      wx.navigateTo({
+        url: '../teacherGatherFoodSelection/teacherGatherFoodSelection?userObj=' + encodeURIComponent(userObj)
+      });
+    },
+
+    clickToFoodSelection_4: function(option) {
+      let userObj = {
+        canteenNum: 4,
+        account: this.data.account,
+        password: this.data.password,
+        identity: this.data.identity,
+      };
+      userObj = JSON.stringify(userObj);
+      wx.navigateTo({
+        url: '../teacherGatherFoodSelection/teacherGatherFoodSelection?userObj=' + encodeURIComponent(userObj)
+      });
+    },
+
+    clickToFoodSelection_5: function(option) {
+      let userObj = {
+        canteenNum: 5,
+        account: this.data.account,
+        password: this.data.password,
+        identity: this.data.identity,
+      };
+      userObj = JSON.stringify(userObj);
+      wx.navigateTo({
+        url: '../teacherGatherFoodSelection/teacherGatherFoodSelection?userObj=' + encodeURIComponent(userObj)
+      });
     },
 
     onClickLeft: function(option) {

@@ -3,39 +3,29 @@
     <view class="canteenSelectionNav">
         <van-nav-bar title="食堂档口选择" left-text="返回" right-text="控制台" left-arrow bind:click-left="onClickLeft"/>
     </view>
-    <van-card title="美食园-煎饼档口" desc="煎饼" thumb="./image/canteen.png" id="msy-jianbing">
+    <van-card title="美食园-煎饼档口" desc="联系方式：159xxxx9836" thumb="./image/canteen.png" id="msy-jianbing">
         <view slot="footer">
-            <van-button type="info" size="mini" bindtap="clickToFoodSelection">进入</van-button>
+            <van-button type="info" size="mini" bindtap="clickToFoodSelection_1">进入</van-button>
         </view>
     </van-card>
-    <van-card title="美食园-煎饼档口" desc="煎饼" thumb="./image/canteen.png" id="msy-jianbing">
+    <van-card title="美食园-麻辣香锅" desc="联系方式：159xxxx9836" thumb="./image/canteen.png" id="msy-jianbing">
         <view slot="footer">
-            <van-button type="info" size="mini">进入</van-button>
+            <van-button type="info" size="mini" bindtap="clickToFoodSelection_2">进入</van-button>
         </view>
     </van-card>
-    <van-card title="美食园-煎饼档口" desc="煎饼" thumb="./image/canteen.png" id="msy-jianbing">
+    <van-card title="美食园-湘里香外" desc="联系方式：159xxxx9836" thumb="./image/canteen.png" id="msy-jianbing">
         <view slot="footer">
-            <van-button type="info" size="mini" >进入</van-button>
+            <van-button type="info" size="mini" bindtap="clickToFoodSelection_3">进入</van-button>
         </view>
     </van-card>
-    <van-card title="美食园-煎饼档口" desc="煎饼" thumb="./image/canteen.png" id="msy-jianbing">
+    <van-card title="美食园-强子烤冷面" desc="联系方式：159xxxx9836" thumb="./image/canteen.png" id="msy-jianbing">
         <view slot="footer">
-            <van-button type="info" size="mini">进入</van-button>
+            <van-button type="info" size="mini" bindtap="clickToFoodSelection_4">进入</van-button>
         </view>
     </van-card>
-    <van-card title="美食园-煎饼档口" desc="煎饼" thumb="./image/canteen.png" id="msy-jianbing">
+    <van-card title="美食园-沙县小吃" desc="联系方式：159xxxx9836" thumb="./image/canteen.png" id="msy-jianbing">
         <view slot="footer">
-            <van-button type="info" size="mini">进入</van-button>
-        </view>
-    </van-card>
-    <van-card title="美食园-煎饼档口" desc="煎饼" thumb="./image/canteen.png" id="msy-jianbing">
-        <view slot="footer">
-            <van-button type="info" size="mini">进入</van-button>
-        </view>
-    </van-card>
-    <van-card title="美食园-煎饼档口" desc="煎饼" thumb="./image/canteen.png" id="msy-jianbing">
-        <view slot="footer">
-            <van-button type="info" size="mini">进入</van-button>
+            <van-button type="info" size="mini" bindtap="clickToFoodSelection_5">进入</van-button>
         </view>
     </van-card>
 </view>

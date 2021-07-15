@@ -31,28 +31,48 @@ Page({
 
     clickToUploadDish() {
         const that = this;
-        wx.request({
-          url: 'http://82.156.219.94:8000/Add_Menu/',
-          data: {
-              Username: that.data.account,
-              Menu_name: that.data.title,
-              Menu_des: that.data.description,
-              price: that.data.price,
-              Package: that.data.check
-          },
-          method: 'POST',
-          header: {
-              'Content-type': 'json'
-          },
-          success(res) {
-              that.setData({
-                  canteenNum: '',
-                  title: '',
-                  description: '',
-                  price: ''
+        if (that.data.title.length === 0) {
+            wx.showToast({
+              title: '菜品名不可为空',
+              icon: 'none',
+              duration: 1000
+            });
+        } else if (that.data.description.length === 0) {
+            wx.showToast({
+              title: '菜品描述不可为空',
+              icon: 'none',
+              duration: 1000
+            });
+        } else if (that.data.price.length === 0) {
+            wx.showToast({
+              title: '菜品单价不可为空',
+              icon: 'none',
+              duration: 1000
+            });
+        } else {
+            wx.request({
+                url: 'http://82.156.219.94:8000/Add_Menu/',
+                data: {
+                    Username: that.data.account,
+                    Menu_name: that.data.title,
+                    Menu_des: that.data.description,
+                    price: that.data.price,
+                    Package: that.data.check
+                },
+                method: 'POST',
+                header: {
+                    'Content-type': 'json'
+                },
+                success(res) {
+                    that.setData({
+                        canteenNum: '',
+                        title: '',
+                        description: '',
+                        price: ''
+                    });
+                }
               });
-          }
-        });
+        }
     },
 
     onClickLeft: function(option) {

@@ -90,22 +90,34 @@ Page({
   
       onSubmit: function(option) {
         let content = '';
+        var sum = 0;
+        for (const item of this.data.items) {
+          sum += item.quantity;
+        }
         for (const item of this.data.items) {
           if (item.quantity !== 0) {
             content += item.title + '*' + item.quantity.toString();
           }
         }
-        let userObj = {
-          account: this.data.account,
-          canteenNum: this.data.canteenNum,
-          content: content,
-          price: this.data.orderPrice,
-          password: this.data.password,
-          identity: this.data.identity
+        if (sum === 0) {
+          wx.showToast({
+            title: '您还未选食品',
+            icon: 'none',
+            duration: 1500
+          });
+        } else {
+          let userObj = {
+            account: this.data.account,
+            canteenNum: this.data.canteenNum,
+            content: content,
+            price: this.data.orderPrice,
+            password: this.data.password,
+            identity: this.data.identity
+          }
+          userObj = JSON.stringify(userObj);
+          wx.navigateTo({
+            url: '../teacherGatherOrderInfoInput/teacherGatherOrderInfoInput?userObj=' + encodeURIComponent(userObj)
+          });
         }
-        userObj = JSON.stringify(userObj);
-        wx.navigateTo({
-          url: '../teacherGatherOrderInfoInput/teacherGatherOrderInfoInput?userObj=' + encodeURIComponent(userObj)
-        });
       }
 })
