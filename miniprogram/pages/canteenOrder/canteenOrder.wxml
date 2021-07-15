@@ -6,7 +6,12 @@
     <view class="canteenOrder">
         <van-cell-group>
             <van-cell wx:for="{{items}}" wx:key="index">
-                <van-card desc="{{item.detail}}" price="{{item.price / 100}}" title="{{item.phonenum + ' ' + item.name}}" thumb="./image/studentHistoryOrder.png" />
+                <van-card desc="{{item.detail}}" price="{{item.price / 100}}" title="{{item.phonenum + ' ' + item.name + ' ' + item.address}}" thumb="./image/studentHistoryOrder.png">
+                    <view slot="footer">
+                        <van-tag type="primary" size="large" round="true">预定时间：{{item.bookTime}}</van-tag>
+                        <van-button type="primary" size="small" bind:click="clickToContactCustomer" round="true" data-index="{{index}}">联系订餐者</van-button>
+                    </view>
+                </van-card>
             </van-cell>
         </van-cell-group>
     </view>

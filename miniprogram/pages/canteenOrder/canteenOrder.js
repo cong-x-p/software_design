@@ -43,7 +43,14 @@ Page({
         };
         userObj = JSON.stringify(userObj);
         wx.navigateTo({
-          url: '../canteenManagerConsole/canteenManagerConsole?userObj=' + encodeURIComponent(userObj)
+            url: '../canteenManagerConsole/canteenManagerConsole?userObj=' + encodeURIComponent(userObj)
+        });
+    },
+
+    clickToContactCustomer: function(event) {
+        var index = event.currentTarget.dataset.index;
+        wx.makePhoneCall({
+          phoneNumber: this.data.items[index].phonenum
         });
     }
 })

@@ -1,14 +1,9 @@
-// miniprogram/pages/register/register.js
+// miniprogram/pages/passwordReset/passwordReset.js
 Page({
     data: {
         account: "",
         password: "",
         confirmPassword: "",
-        identity: "",
-        items: [
-            {value: "student", name: "学生"},
-            {value: "teacher", name: "教师"}
-        ]
     },
 
     accountInput: function(event) {
@@ -29,7 +24,8 @@ Page({
         });
     },
 
-    registerFunction: function() {
+    resetFunction: function() {
+        var that = this;
         if (this.data.account.length == 0) {
             wx.showToast({
               title: '账号不可为空',
@@ -58,57 +54,35 @@ Page({
                 password: "",
                 confirmPassword: ""
             });
-        } else if (this.data.identity.length == 0) {
-            wx.showToast({
-              title: '您还未选择身份',
-              icon: 'none',
-              duration: 1500
-            });
         } else {
             wx.request({
-              url: 'http://82.156.219.94:8000/enroll/',
-              data: {
-                username: this.data.account,
-                password: this.data.password,
-                identity: this.data.identity
-              },
+              url: 'http://82.156.219.94:8000/Change/',
               method: 'POST',
               header: {
                 'Content-type': 'json'
               },
+              data: {
+                  username: this.data.account,
+                  new_password: this.data.password
+              },
               success(res) {
-                if (res.data.username === '' || res.data.password === '' || res.data.identity === '') {
-                  wx.showToast({
-                    title: '该用户名已被注册，请返回登录',
-                    icon: 'none',
-                    duration: 1500
-                  });
-                } else {
-                  wx.showToast({
-                    title: '注册成功',
-                    icon: 'success',
-                    duration: 1000
-                  });
-                  wx.navigateTo({
-                    url: '../home/home'
-                  });
-                }
+                  console.log(res.data.username);
+                  if (res.data.username === '' || res.data.password === '') {
+                      wx.showToast({
+                        title: '用户名不存在，请先注册',
+                        icon: 'none',
+                        duration: 1500
+                      });
+                  } else {
+                      wx.showToast({
+                        title: '重置成功',
+                        icon: 'success',
+                        duration: 1500
+                      });
+                  }
               }
-            });
+            })
         }
-    },
-
-    identitySelection: function(event) {
-        const items = this.data.items;
-        const len = items.length;
-        for (let i = 0; i < len; i++) {
-          items[i].checked = items[i].value === event.detail.value;
-        }
-    
-        this.setData({
-          items,
-          identity: event.detail.value
-        });
     },
 
     returnToLoginFunction: function() {

@@ -119,6 +119,12 @@
                     "pathName": "pages/canteenOrder/canteenOrder",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "pages/passwordReset/passwordReset",
+                    "pathName": "pages/passwordReset/passwordReset",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }

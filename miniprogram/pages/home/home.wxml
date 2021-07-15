@@ -50,6 +50,10 @@
     <view class="registerButton">
       <button class="weui-btn weui-btn_primary" bindtap="registerSwitch">还不是用户？</button>
     </view>
+    <!-- 跳转至重置密码页面 -->
+    <view class="linkToReset">
+      <button class="weui-btn weui-btn_primary" bindtap="resetSwitch">忘记密码？</button>
+    </view>
   </view>
 </view>
 

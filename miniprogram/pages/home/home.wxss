@@ -35,6 +35,11 @@ page {
   flex: auto;
 }
 
+.linkToReset {
+  margin-top: 10px;
+  flex: auto;
+}
+
 #identitySelection {
   margin-top: 15px;
   flex: auto;

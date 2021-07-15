@@ -99,6 +99,12 @@ Page({
     });
   },
 
+  resetSwitch: function(option) {
+    wx.navigateTo({
+      url: '../passwordReset/passwordReset'
+    });
+  },
+
   identitySelection: function(event) {
     const items = this.data.items;
     const len = items.length;
