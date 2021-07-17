@@ -60,6 +60,6 @@ Page({
     onClickLeft: function(option) {
       wx.navigateTo({
         url: '../home/home'
-      })
+      });
     }
 })
